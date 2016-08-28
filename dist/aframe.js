@@ -56868,7 +56868,7 @@ module.exports={
     "dist:release": "npm run dist:release:min && npm run dist:release:max",
     "dist:release:max": "npm run browserify -s -- --debug | exorcist dist/aframe-v0.3.0.js.map > dist/aframe-v0.3.0.js",
     "dist:release:min": "npm run browserify -s -- --debug -p [minifyify --map aframe-v0.3.0.min.js.map --output dist/aframe-v0.3.0.min.js.map] -o dist/aframe-v0.3.0.min.js",
-    "ghpages": "ghpages -p gh-pages",
+    "ghpages": "ghpages -p gh-pages/",
     "lint": "semistandard -v | snazzy",
     "precommit": "npm run lint",
     "preghpages": "npm run dist && rimraf gh-pages && mkdirp gh-pages && cp -r {.nojekyll,dist,lib,examples,index.html,style} gh-pages/. 2>/dev/null || : && git checkout dist/ && replace 'dist/aframe.min.js' 'dist/aframe.min.js' gh-pages/ -r --silent",
